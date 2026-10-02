@@ -26,8 +26,7 @@ The repository includes:
 | `NON-SAM model predict.py` | PaddlePaddle inference script for the baseline models (CCNet, DMNet, FCN, UNViT). |
 | `requirement.txt` | Python dependencies for both the SAM and non-SAM pipelines. |
 | `ModelWeight.rar` | Pretrained checkpoints (`.pth` for SAM, `.pdparams` for PaddleSeg models), fine-tuned on our orchid floral organ dataset. |
-| `TESTIMAGES.rar` | Test images covering diverse *Cymbidium* species and floral patterns, for model verification. |
-| `ReferenceLabels.rar` | Expert-annotated reference labels (RGB masks) matching the test images, for visual comparison and further validation. |
+| `TEST Images.rar` | Test images covering diverse *Cymbidium* species and floral patterns, for model verification. |
 
 > **Note:** Model weights, test images, and reference labels are being added to this repository and will be updated here.
 
