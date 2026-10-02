@@ -15,8 +15,8 @@ Chinese *Cymbidium* orchids show rich diversity in floral shape and color. Extra
 
 The repository includes:
 
-- **Adapted SAM (OrchidSAM)**: the Segment Anything Model (SAM) adapted for prompt-free semantic segmentation. Prompt-driven tokens are replaced with organ-type-specific queries, so no manual point or box prompts are needed. The adapted model is fine-tuned with an optimized loss function.
-- **Conventional deep learning baselines**: CCNet, DMNet, UNViT, and ATUNet, implemented with the PaddleSeg framework.
+- **Adapted SAM (OrchidSAM)**: the Segment Anything Model (SAM) adapted for prompt-free semantic segmentation. Prompt-driven tokens are replaced with organ-type-specific queries, so no manual point or box prompts are needed. We fine-tune the adapted model with an optimized loss function.
+- **Conventional deep learning baselines**: CCNet, DMNet, UNViT, and FCN, implemented with the PaddleSeg framework.
 
 ## Repository contents
 
@@ -107,7 +107,7 @@ python "NON-SAM model predict.py"
 
 ## Output
 
-Predictions are semantic masks for four organ types: sepal, petal, labellum, and gynostemium. The expert-annotated `ReferenceLabels` are provided as RGB masks, so predictions can be compared against them visually or with standard metrics such as mIoU and F-score.
+Predictions are semantic masks for four organ types: sepal, petal, labellum, and gynostemium. The expert-annotated `ReferenceLabels` are provided as RGB masks, so you can compare predictions visually or with standard metrics such as mIoU and F-score.
 
 ## Citation
 
@@ -124,27 +124,14 @@ If you use this code, the pretrained weights, or the test data, please cite the 
 }
 ```
 
-**Software and data archive**
-
-```bibtex
-@dataset{wu_orchidsam_zenodo,
-  author    = {Wu, Bingxiao},
-  title     = {OrchidSAM},
-  year      = {2026},
-  publisher = {Zenodo},
-  doi       = {10.5281/zenodo.20149830},
-  url       = {https://doi.org/10.5281/zenodo.20149830}
-}
-```
-
 ## Acknowledgements
 
 This work builds on [Segment Anything](https://github.com/facebookresearch/segment-anything) and [PaddleSeg](https://github.com/PaddlePaddle/PaddleSeg).
 
 ## License
 
-The Zenodo archive is released under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) license. Please credit the authors when reusing the materials.
+Please credit the authors when reusing the materials.
 
 ## Contact
 
-For questions, please open an issue on this repository or contact **[Name, email]**.
+For questions, please open an issue in this repository or contact **[Name, email]**.
