@@ -15,7 +15,7 @@ Chinese *Cymbidium* orchids show rich diversity in floral shape and color. Extra
 
 The repository includes:
 
-- **Adapted SAM (OrchidSAM)**: the Segment Anything Model (SAM) adapted for prompt-free semantic segmentation. Prompt-driven tokens are replaced with organ-type-specific queries, so no manual point or box prompts are needed. We fine-tune the adapted model with an optimized loss function.
+- **Adapted SAM (OrchidSAM)**: The Segment Anything model (SAM) adapted for prompt-free semantic segmentation. Prompt-driven tokens are replaced with organ-type-specific queries, so no manual point or box prompts are needed. We fine-tune the adapted model with an optimized loss function.
 - **Conventional deep learning baselines**: CCNet, DMNet, UNViT, and FCN, implemented with the PaddleSeg framework.
 
 ## Repository contents
@@ -111,7 +111,7 @@ Predictions are semantic masks for four organ types: sepal, petal, labellum, and
 
 ## Citation
 
-If you use this code, the pretrained weights, or the test data, please cite the paper and the Zenodo archive.
+If you use this code, the pretrained weights, or the test data, please cite the paper.
 
 **Paper**
 
