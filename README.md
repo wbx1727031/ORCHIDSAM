@@ -23,7 +23,7 @@ The repository includes:
 | File | Description |
 | --- | --- |
 | `SAM model predict.py` | PyTorch inference script for the adapted SAM. Performs fully automated, prompt-free segmentation of four orchid floral organs. |
-| `NON-SAM model predict.py` | PaddlePaddle inference script for the baseline models (CCNet, DMNet, ATUNet, UNViT). |
+| `NON-SAM model predict.py` | PaddlePaddle inference script for the baseline models (CCNet, DMNet, FCN, UNViT). |
 | `requirement.txt` | Python dependencies for both the SAM and non-SAM pipelines. |
 | `ModelWeight.rar` | Pretrained checkpoints (`.pth` for SAM, `.pdparams` for PaddleSeg models), fine-tuned on our orchid floral organ dataset. |
 | `TESTIMAGES.rar` | Test images covering diverse *Cymbidium* species and floral patterns, for model verification. |
