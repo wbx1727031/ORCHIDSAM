@@ -97,7 +97,7 @@ python "SAM model predict.py"
 
 The script segments each input image into the four floral organ types without any manual prompts.
 
-### Non-SAM baselines (CCNet, DMNet, ATUNet, UNViT)
+### Non-SAM baselines (CCNet, DMNet, FCN, UNViT)
 
 ```bash
 python "NON-SAM model predict.py"
