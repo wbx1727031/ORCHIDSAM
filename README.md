@@ -1,6 +1,8 @@
 # OrchidSAM
 
-[![DOI]
+<!-- TODO: 获得 DOI 后取消注释并补全
+[![DOI](https://zenodo.org/badge/DOI/your-doi-here.svg)](https://doi.org/your-doi-here)
+-->
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 Pretrained weights and inference scripts for prompt-free floral organ semantic segmentation of Chinese *Cymbidium* orchid images.
@@ -25,10 +27,21 @@ The repository includes:
 | `SAM model predict.py` | PyTorch inference script for the adapted SAM. Performs fully automated, prompt-free segmentation of four orchid floral organs. |
 | `NON-SAM model predict.py` | PaddlePaddle inference script for the baseline models (CCNet, DMNet, FCN, UNViT). |
 | `requirement.txt` | Python dependencies for both the SAM and non-SAM pipelines. |
-| `ModelWeight.rar` | Pretrained checkpoints (`.pth` for SAM, `.pdparams` for PaddleSeg models), fine-tuned on our orchid floral organ dataset. |
 | `TEST Images.rar` | Test images covering diverse *Cymbidium* species and floral patterns, for model verification. |
 
-> **Note:** Model weights, test images, and reference labels are being added to this repository and will be updated here.
+> **Note:** Model weights are hosted outside the repository (see [Model weights](#model-weights) below). Test images and reference labels are being added to this repository and will be updated here.
+
+## Model weights
+
+Pretrained checkpoints are fine-tuned on our orchid floral organ dataset and are distributed as follows:
+
+| Model | Format | Download |
+| --- | --- | --- |
+| Fine-tuned SAM (OrchidSAM) | `.pth` | [Google Drive](https://drive.google.com/drive/folders/1-obbtQVtFj-BGAIBzLUgEblbkkT8J5eu?usp=sharing) |
+| Non-SAM baselines (CCNet, DMNet, FCN, UNViT) | `.pdparams` | [GitHub Releases](https://github.com/wbx1727031/ORCHIDSAM/releases) |
+
+- The fine-tuned SAM weights are shared via Google Drive because of their file size.
+- The non-SAM baseline weights are attached as assets to the repository's Releases page.
 
 ## Installation
 
@@ -86,7 +99,13 @@ pip install paddlepaddle-gpu paddleseg numpy pandas Pillow matplotlib
 
 ## Usage
 
-Before running, extract the model weights, test images, and reference labels, then set the checkpoint path, input image folder, and output folder in the corresponding script.
+Before running:
+
+1. Download the model weights:
+   - **SAM**: download the fine-tuned `.pth` checkpoint from [Google Drive](https://drive.google.com/drive/folders/1-obbtQVtFj-BGAIBzLUgEblbkkT8J5eu?usp=sharing).
+   - **Non-SAM baselines**: download the `.pdparams` files from the [Releases](https://github.com/wbx1727031/ORCHIDSAM/releases) page.
+2. Extract the test images and reference labels.
+3. Set the checkpoint path, input image folder, and output folder in the corresponding script.
 
 ### Adapted SAM (prompt-free)
 
@@ -116,7 +135,7 @@ If you use this code, the pretrained weights, or the test data, please cite the 
 
 ```bibtex
 @article{orchidsam,
-  title   = {Floral Organ Semantic Segmentation from Chinese Cymbidium Orchid Images: Adapted Segment Anything Model Fine-tuning versus Task-Specific Model Construction},
+  title   = {Floral Organ Semantic Segmentation from Chinese Cymbidium Orchid Images via Architecture Adaptation and Fine-tuning of the Segment Anything Model},
   author  = {[Author list]},
   journal = {[Journal]},
   year    = {[Year]}
